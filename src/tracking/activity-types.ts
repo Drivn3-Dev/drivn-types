@@ -1,0 +1,32 @@
+/**
+ * The Different Activity Types, Most of it are supported by google directions API
+ */
+export enum ActivityType {
+  "STATIONARY" = "STATIONARY",
+  "WALKING" = "WALKING",
+  "RUNNING" = "RUNNING",
+  "CYCLING" = "CYCLING",
+  "CAR" = "CAR",
+  "EV" = "EV",
+  "AIRPLANE" = "AIRPLANE",
+  "TRAIN" = "TRAIN",
+  "BUS" = "BUS",
+  "FERRY" = "FERRY",
+  "METRO" = "METRO",
+  "TRAM" = "TRAM",
+  "SUBWAY" = "SUBWAY",
+  "CABLE_CAR" = "CABLE_CAR",
+  "COMMUTER_TRAIN" = "COMMUTER_TRAIN",
+  "FUNICULAR" = "FUNICULAR",
+  "GONDOLA_LIFT" = "GONDOLA_LIFT",
+  "HEAVY_RAIL" = "HEAVY_RAIL",
+  "HIGH_SPEED_TRAIN" = "HIGH_SPEED_TRAIN",
+  "INTERCITY_BUS" = "INTERCITY_BUS",
+  "LONG_DISTANCE_TRAIN" = "LONG_DISTANCE_TRAIN",
+  "METRO_RAIL" = "METRO_RAIL",
+  "MONORAIL" = "MONORAIL",
+  "OTHER" = "OTHER",
+  "RAIL" = "RAIL",
+  "SHARE_TAXI" = "SHARE_TAXI",
+  "TROLLEYBUS" = "TROLLEYBUS",
+}
