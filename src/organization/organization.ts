@@ -1,13 +1,13 @@
 // A Singleton Organization Object Instance
 export interface Organization {
   // The Organization's Admin ID
-  adminIds?: string[];
+  adminIds: string[];
 
   // The Organization's Authentication Code / ID
   authCode: string;
 
   // When The Organization Was Created (ISO Format Timestamp)
-  createdAt: string;
+  createdAt: Date;
 
   // The Name Of The Organization
   name: string;
@@ -19,13 +19,13 @@ export interface Organization {
   emailSuffix?: string;
 
   // The Employee Count Of The Organization
-  employeeCount?: number;
+  employeeCount: number;
 
   // The Contact/Support Email For The Users
   contactEmail: string;
 
   // The Fiscal Year Start Date Of The Organization
-  fiscalYearStartDate?: string;
+  fiscalYearStartDate?: Date;
 
   // The Departments In The Organization
   departmentIds: string[];
@@ -36,9 +36,12 @@ export interface Organization {
   // The Subscription ID Of The Organization
   subscriptionId: string;
 
-  // Next Payment Date
-  nextPaymentDate: string;
+  // The Max Amount Of Offices The Organization Can Have
+  maxOfficeCount: number;
 
-  // Automated Payments Or Invoices
-  paymentType: "automated" | "invoice";
+  // The Max Amount Of Departments The Organization Can Have
+  maxDepCount: number;
+
+  // The Organization Owner
+  ownerId: string;
 }

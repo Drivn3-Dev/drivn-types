@@ -14,4 +14,10 @@ export interface Department {
 
   // The estimated amount of employees in the department
   employeeCount: number;
+
+  // The Organization Id That The Department Belonds To
+  orgId: string;
+
+  // The Department Color
+  color: string;
 }

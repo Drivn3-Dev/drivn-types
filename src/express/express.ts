@@ -8,11 +8,16 @@ import { User } from "../user/user.js";
 // Adding The User To The Express Request
 export declare interface UserRequest extends ExpressRequest {
   // The User Info Object
-  userInfo?: User;
+  user?: User;
 }
 
 // Custom Request Body
 export declare interface Request<T = unknown> extends UserRequest {
+  body: T;
+}
+
+// Unprotected Request Body (No user Info)
+export declare interface UnprotectedRequest<T = unknown> extends ExpressRequest {
   body: T;
 }
 

@@ -1,4 +1,4 @@
-// A Singleton User Object Instance
+// The User Interface Model
 export interface User {
   // First Name
   firstName: string;
@@ -9,14 +9,11 @@ export interface User {
   // The User's UID
   uid: string;
 
-  // The User's Email
-  email: string;
-
   // The apns Token
   pushToken?: string;
 
   // The ID Of The Current In-Use Vehicle
-  current?: string;
+  currentVehicleId?: string;
 
   // The User Profile Image URL
   image?: string;
@@ -27,8 +24,8 @@ export interface User {
   // The User's Notifications
   notificationIds: string[];
 
-  // The User's Past Tracking Document IDs
-  past_trackingIDs?: string[];
+  // The Past Trip Ids
+  tripIds: string[];
 
   // The Organization ID
   organizationId: string;
@@ -39,12 +36,18 @@ export interface User {
   // The Office That The User Belongs To
   officeId?: string;
 
-  // Is The User An Admin Of His / Her Organization (Is No If Undefined)
+  // Is The User An Admin Of His / Her Organization
   isAdmin: boolean;
 
   // Is The User Removed
   removed?: string;
 
   // The Timestamp When The User Was Added To The Organization
-  timeAdded: string;
+  timeAdded: Date;
+
+  // Is The User Anonymous
+  anonymous: boolean;
+
+  // Is The User The Owner Of The Organization
+  isOwner: boolean
 }

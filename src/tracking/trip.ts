@@ -52,6 +52,15 @@ export interface PastTrip {
   // The Trip Name
   name: string;
 
-  // Has The Teip Been Reported
+  // Has The Trip Been Reported
   reported: boolean;
+
+  // Is The Trip Marked Correct
+  correct: boolean;
+
+  // The User Id Of The Trip
+  userId: string;
+
+  // The Creation Date Of The Trip
+  createdAt: Date;
 }

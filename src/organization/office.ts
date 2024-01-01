@@ -10,4 +10,16 @@ export interface Office extends Address {
 
   // Employees In The Office
   estimatedEmployeeCount: number;
+
+  // The Office Radius For Location Tracking
+  radius: number;
+
+  // The Organization Id That The Office Belongs To
+  orgId: string;
+
+  // All The Employees In The Office
+  employees: string[];
+
+  // The Office Color
+  color: string;
 }

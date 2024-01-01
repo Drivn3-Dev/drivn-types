@@ -5,7 +5,10 @@ export interface Location {
 
   // The Location Latitude
   lat: number;
-
-  // Optional: the radius, in meters, of the region's boundary
-  radius?: number;
 }
+
+export interface LocationTimestamp extends Location {
+  time: string;
+}
+
+export type CurrentDrive = LocationTimestamp[];

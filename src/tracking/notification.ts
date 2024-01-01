@@ -10,12 +10,12 @@ export interface Notification {
   body: string;
 
   // Date and time when the notification was created
-  created: string;
+  createdAt: Date;
 
   // Flag indicating whether the notification has been read or not
   read: boolean;
 
-  // Optional sender ID for the notification
+  // The User ID That The Notification Belongs To
   userId: string;
 
   // Type of the notification
