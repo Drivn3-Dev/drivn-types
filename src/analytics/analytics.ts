@@ -2,7 +2,7 @@ import { ActivityType } from "../index.js";
 
 export interface Analytics {
   // The Analytics Associated Id (User Id Or Office Id Or Department Id)
-  associatedId: string;
+  id: string;
 
   // The Total Number Of Trips
   totalTrips: number;
@@ -43,7 +43,12 @@ export interface ActivityTypeMetrics {
   count: number;
 }
 
-export interface RececentDrive extends Analytics {
+type RecentDrive = Omit<
+  Analytics,
+  "pastTripIds" | "recentTripIds" | "avgDistance" | "avgEmissions"
+>;
+
+export interface RececentDriveDate extends RecentDrive {
   // The Date Of The Drive
   date: Date;
 }

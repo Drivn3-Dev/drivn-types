@@ -31,6 +31,7 @@ export interface OrganizationForCreate
     | "adminIds"
     | "departmentIds"
     | "officeIds"
+    | "subsidiaryIds"
     | "subscriptionId"
     | "ownerId"
     | "fiscalYearStartDate"

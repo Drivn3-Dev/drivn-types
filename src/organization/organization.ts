@@ -33,6 +33,9 @@ export interface Organization {
   // The Offices In The Organization
   officeIds: string[];
 
+  // The Subsidiaries In The Organization
+  subsidiaryIds?: string[];
+
   // The Subscription ID Of The Organization
   subscriptionId: string;
 
