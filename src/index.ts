@@ -38,33 +38,99 @@ export const EMISSIONS_FACTORS = {
 
 export * from "./errors/drivn-error.js";
 export * from "./tracking/activity-types.js";
+export * from "./organization/subscription-info.js"
 
-export * from "./organization/office.js";
-export * from "./organization/department.js";
-export * from "./organization/organization.js";
+import * as ac from "./tracking/activity-types.js";
 
-export * from "./express/express.js";
+import * as office from "./organization/office.js";
+import * as department from "./organization/department.js";
+import * as org from "./organization/organization.js";
 
-export * from "./tracking/address.js";
-export * from "./tracking/location.js";
-export * from "./tracking/notification.js";
-export * from "./tracking/trip.js";
+import * as express from "./express/express.js";
 
-export * from "./user/user.js";
-export * from "./user/user-with-creds.js";
-export * from "./user/user-with-token.js";
+import * as address from "./tracking/address.js";
+import * as location from "./tracking/location.js";
+import * as notif from "./tracking/notification.js";
+import * as trip from "./tracking/trip.js";
 
-export * from "./vehicles/vehicle.js";
-export * from "./vehicles/vehicle-model.js";
-export * from "./vehicles/vehicle-make.js";
+import * as user from "./user/user.js";
+import * as creds from "./user/user-with-creds.js";
+import * as token from "./user/user-with-token.js";
 
-export * from "./organization/subscription-info.js";
+import * as vehicle from "./vehicles/vehicle.js";
+import * as model from "./vehicles/vehicle-model.js";
+import * as make from "./vehicles/vehicle-make.js";
 
-export * from "./props/log-in.js";
-export * from "./props/create.js";
+import * as subscription from "./organization/subscription-info.js";
 
-export * from "./props/team.js";
-export * from "./props/subscription.js";
-export * from "./props/contact.js";
-export * from "./props/header.js";
-export * from "./props/no-auth.js";
+import * as login from "./props/log-in.js";
+import * as create from "./props/create.js";
+
+import * as team from "./props/team.js";
+import * as sub from "./props/subscription.js";
+import * as contact from "./props/contact.js";
+import * as header from "./props/header.js";
+import * as noauth from "./props/no-auth.js";
+import * as subsidiary from "./organization/subsidiary.js";
+
+declare global {
+  namespace Drivn {
+
+    // Tracking Types
+    type ActivityType = ac.ActivityType;
+    type Address = address.Address;
+    type Location = location.Location;
+    type Notification = notif.Notification;
+    type PastTrip = trip.PastTrip;
+    type Trip = trip.Trip;
+    type Segment = trip.Segment;
+    type CurrentDrive = location.CurrentDrive;
+    type LocationTimestamp = location.LocationTimestamp;
+
+    // Organization Types
+    type Organization = org.Organization;
+    type Office = office.Office;
+    type Subsidiary = subsidiary.Subsidiary;
+    type Department = department.Department;
+
+    // Express Types
+    type Request<T = unknown> = express.Request<T>;
+    type Response = express.Response;
+    type Next = express.Next;
+    type UnprotectedRequest<T = unknown> = express.UnprotectedRequest<T>;
+    type UserRequest = express.UserRequest;
+
+    // User Types
+    type User = user.User;
+    type UserWithCreds = creds.UserWithCreds;
+    type UserWithToken = token.UserWithToken;
+
+    // Vehicle Types
+    /**
+     * @deprecated User Make Or Model
+     */
+    type Vehicle = vehicle.Vehicle;
+    type VehicleMake = make.VehicleMake;
+    type VehicleModel = model.VehicleModel;
+    type UserVehicle = model.UserVehicle;
+
+    // Props Types
+    type TeamMember = team.TeamMember;
+    type ContactValues = contact.ContactValues;
+    type SubscriptionCellData = sub.SubscriptionCellData;
+    type HeaderProps = header.HeaderProps;
+    type NoAuthProps = noauth.NoAuthProps;
+    type LoginValues = login.LoginValues;
+    type ResetPasswordValues = login.ResetPasswordValues;
+    type CreateOrganization = create.CreateOrganization;
+    type OrganizationForCreate = create.OrganizationForCreate;
+    type UserForCreate = create.UserForCreate;
+
+    // Subscription Info
+    type SubscriptionInfo = subscription.SubscriptionInfo;
+    type ValidSubscription = subscription.ValidSubscription;
+    type InvalidSubscription = subscription.InvalidSubscription;
+    type Invoice = subscription.Invoice;
+    type SubscriptionStatus = subscription.SubscriptionStatus;
+  }
+}

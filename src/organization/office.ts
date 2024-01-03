@@ -22,4 +22,7 @@ export interface Office extends Address {
 
   // The Office Color
   color: string;
+
+  // The Subsidiary Id
+  subsidiaryId?: string;
 }

@@ -49,5 +49,8 @@ export interface User {
   anonymous: boolean;
 
   // Is The User The Owner Of The Organization
-  isOwner: boolean
+  isOwner: boolean;
+
+  // The Subsidiary Id
+  subsidiaryId?: string;
 }

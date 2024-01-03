@@ -1,7 +1,7 @@
 // A Custom Error Handler For The Drivn Application
-export class DrivnError extends Error {
+export class Err extends Error {
   // The Name Of The Error
-  name: DrivnErrorType;
+  name: Type;
 
   // The Message For The Error
   message: string;
@@ -19,7 +19,7 @@ export class DrivnError extends Error {
     cause,
     relatedVar = "root",
   }: {
-    name: DrivnErrorType;
+    name: Type;
     message: string;
     cause?: any;
     relatedVar: string;
@@ -27,12 +27,12 @@ export class DrivnError extends Error {
     super();
     this.name = name;
     this.message = message;
-    this.cause = cause
-    this.relatedVar = relatedVar
+    this.cause = cause;
+    this.relatedVar = relatedVar;
   }
 }
 
-export enum DrivnErrorType {
+export enum Type {
   VALIDATOR = "VALIDATOR",
   MISSING_FIELD = "MISSING_FIELD",
   MISSING_PERMISSIONS = "MISSING_PERMISSIONS",

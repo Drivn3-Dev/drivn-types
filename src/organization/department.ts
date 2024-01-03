@@ -20,4 +20,7 @@ export interface Department {
 
   // The Department Color
   color: string;
+
+  // The Subsidiary Id
+  subsidiaryId?: string;
 }
