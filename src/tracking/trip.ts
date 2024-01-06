@@ -63,4 +63,7 @@ export interface PastTrip {
 
   // The Creation Date Of The Trip
   createdAt: Date;
+
+  // The Analytics Id For The Trip
+  analyticsId: string;
 }

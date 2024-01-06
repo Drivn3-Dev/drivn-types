@@ -22,11 +22,11 @@ export interface Analytics {
   // All The Activity Types
   activityTypes: ActivityTypeMetrics[];
 
-  // Recent Trip Ids
-  recentTripIds: string[];
+  // Recent Trip Analytics Ids
+  recentTripAnalyticsIds: string[];
 
-  // Past Trip Ids (Not In Recent Trip Ids)
-  pastTripIds: string[];
+  // Past Trip Analytics Ids (Not In Recent Trip Ids)
+  pastTripAnalyticsIds: string[];
 }
 
 export interface ActivityTypeMetrics {
@@ -45,10 +45,16 @@ export interface ActivityTypeMetrics {
 
 type RecentDrive = Omit<
   Analytics,
-  "pastTripIds" | "recentTripIds" | "avgDistance" | "avgEmissions"
+  | "pastTripAnalyticsIds"
+  | "recentTripAnalyticsIds"
+  | "avgDistance"
+  | "avgEmissions"
 >;
 
 export interface RececentDriveDate extends RecentDrive {
   // The Date Of The Drive
   date: Date;
+
+  // The Trips In The Analytics Date
+  tripIds: string[];
 }

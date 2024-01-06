@@ -47,4 +47,10 @@ export interface Organization {
 
   // The Organization Owner
   ownerId: string;
+
+  // Does The Organization Have Subsidiaries
+  hasSubsidiaries: boolean;
+
+  // The Max Subsididary Count For The Organization
+  maxSubCount: number;
 }
