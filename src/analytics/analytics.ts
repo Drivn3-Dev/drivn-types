@@ -13,12 +13,6 @@ export interface Analytics {
   // The Total Distance
   totalDistance: number;
 
-  // Average Distance
-  avgDistance: number;
-
-  // Average Emissions
-  avgEmissions: number;
-
   // All The Activity Types
   activityTypes: ActivityTypeMetrics[];
 
@@ -31,7 +25,7 @@ export interface Analytics {
 
 export interface ActivityTypeMetrics {
   // The Activity Type
-  type: ActivityType;
+  activityType: ActivityType;
 
   // Activity Type Emissions
   emissions: number;
@@ -47,14 +41,16 @@ type RecentDrive = Omit<
   Analytics,
   | "pastTripAnalyticsIds"
   | "recentTripAnalyticsIds"
-  | "avgDistance"
-  | "avgEmissions"
+  | "totalTrips"
 >;
 
-export interface RececentDriveDate extends RecentDrive {
+export interface RecentDriveDate extends RecentDrive {
   // The Date Of The Drive
   date: Date;
 
   // The Trips In The Analytics Date
   tripIds: string[];
+
+  // The Entity Id For The Drive Date
+  entityId: string;
 }

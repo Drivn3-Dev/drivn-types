@@ -22,7 +22,7 @@ export declare interface UnprotectedRequest<T = unknown> extends ExpressRequest 
 }
 
 // Custom Response
-export declare interface Response extends ExpressResponse {}
+export declare interface Response<T = any> extends ExpressResponse<T> {}
 
 // Exporting The Next Function
 export declare interface Next extends NextFunction {}

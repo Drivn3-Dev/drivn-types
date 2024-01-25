@@ -1,11 +1,12 @@
 {
   "name": "samuel-types",
   "private": false,
-  "version": "1.0.31",
+  "version": "1.0.41",
   "description": "The types for the samuel",
   "main": "dist/index.js",
   "scripts": {
-    "build": "npx tsc"
+    "build": "npx tsc",
+    "publish": "git add . && git commit -m \"updated analytics\" && git push origin develop"
   },
   "type": "module",
   "types": "dist/index.d.ts",

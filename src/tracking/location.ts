@@ -12,3 +12,8 @@ export interface LocationTimestamp extends Location {
 }
 
 export type CurrentDrive = LocationTimestamp[];
+
+export interface LogRequestBody {
+  // The Current Date Time
+  locations: Drivn.CurrentDrive;
+}

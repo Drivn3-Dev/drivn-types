@@ -47,13 +47,13 @@ export interface PastTrip {
   vehicleId?: string;
 
   // The Office ID
-  officeId?: string;
+  officeId: string;
 
   // The Trip Name
   name: string;
 
-  // Has The Trip Been Reported
-  reported: boolean;
+  // The Reported Trip Id (Undefined If Not Reported)
+  reported?: string;
 
   // Is The Trip Marked Correct
   correct: boolean;
@@ -65,5 +65,5 @@ export interface PastTrip {
   createdAt: Date;
 
   // The Analytics Id For The Trip
-  analyticsId: string;
+  analyticsIds: string[];
 }

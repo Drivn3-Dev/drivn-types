@@ -52,6 +52,7 @@ import * as address from "./tracking/address.js";
 import * as location from "./tracking/location.js";
 import * as notif from "./tracking/notification.js";
 import * as trip from "./tracking/trip.js";
+import * as report from "./tracking/report.js";
 
 import * as user from "./user/user.js";
 import * as creds from "./user/user-with-creds.js";
@@ -86,6 +87,8 @@ declare global {
     type Segment = trip.Segment;
     type CurrentDrive = location.CurrentDrive;
     type LocationTimestamp = location.LocationTimestamp;
+    type Report = report.Report;
+    type TripCreate = location.LogRequestBody;
 
     // Organization Types
     type Organization = org.Organization;
@@ -135,7 +138,38 @@ declare global {
 
     // Analytics Types
     type Analytics = analytics.Analytics;
-    type RececentDriveDate = analytics.RececentDriveDate;
+    type RecentDriveDate = analytics.RecentDriveDate;
     type ActivityTypeMetrics = analytics.ActivityTypeMetrics;
+
+    // Request Types
+    type OfficeResponse = { offices: Office[]; total: number };
+    type DepartmentResponse = {
+      departments: Department[];
+      total: number;
+    };
+    type EmployeeResponse = {
+      employees: User[];
+      total: number;
+    };
+    type TripResponse = {
+      trips: PastTrip[];
+      total: number;
+    };
+    type AnalyticsResponse = {
+      plottable_analytics: RecentDriveDate[];
+      entity_analytics: Analytics;
+      
+    };
+    type DepartmentCreate = Omit<Department, "id">;
+    type DepartmentUpdate = Omit<Department, "id" | "employees">;
+    type OfficeCreate = Omit<Office, "id" | "employees" | "orgId">;
+    type OfficeUpdate = Omit<Office, "id" | "orgId" | "employees">;
+    type ReportCreate = Omit<Report, "tripId" | "userId" | "id">;
+    type UserCreate = Omit<UserWithCreds, "timeAdded" | "uid">;
+    type UserUpdate = Partial<Omit<User, "uid" | "timeAdded">>;
+    type ToggleAnonymous = {
+      anonymous: boolean;
+    };
+    type OrganizationUpdate = Partial<OrganizationForCreate>;
   }
 }
