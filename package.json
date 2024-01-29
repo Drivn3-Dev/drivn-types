@@ -1,7 +1,7 @@
 {
   "name": "samuel-types",
   "private": false,
-  "version": "1.0.42",
+  "version": "1.0.43",
   "description": "The types for the samuel",
   "main": "dist/index.js",
   "scripts": {

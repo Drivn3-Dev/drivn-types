@@ -74,6 +74,7 @@ import * as header from "./props/header.js";
 import * as noauth from "./props/no-auth.js";
 import * as subsidiary from "./organization/subsidiary.js";
 import * as analytics from "./analytics/analytics.js";
+import * as support from "./analytics/ticket.js";
 
 declare global {
   namespace Drivn {
@@ -141,6 +142,10 @@ declare global {
     type RecentDriveDate = analytics.RecentDriveDate;
     type ActivityTypeMetrics = analytics.ActivityTypeMetrics;
 
+    // Support
+    type SupportTicket = support.SupportTicket;
+    type TicketMessage = support.TicketMessage;
+
     // Request Types
     type OfficeResponse = { offices: Office[]; total: number };
     type DepartmentResponse = {
@@ -158,7 +163,6 @@ declare global {
     type AnalyticsResponse = {
       plottable_analytics: RecentDriveDate[];
       entity_analytics: Analytics;
-      
     };
     type DepartmentCreate = Omit<Department, "id">;
     type DepartmentUpdate = Omit<Department, "id" | "employees">;
