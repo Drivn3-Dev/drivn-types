@@ -57,3 +57,7 @@ export interface User {
   // The Status Of The User
   status: "ACTIVE" | "REMOVED" | "INVITED";
 }
+
+export interface UserForInvite extends Drivn.UserForCreate {
+  isAdmin: boolean;
+}

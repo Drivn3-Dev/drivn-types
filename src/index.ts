@@ -39,7 +39,7 @@ export const EMISSIONS_FACTORS = {
 export * from "./errors/drivn-error.js";
 export * from "./tracking/activity-types.js";
 export * from "./organization/subscription-info.js";
-export * from "./routes/index.js"
+export * from "./routes/index.js";
 
 import * as ac from "./tracking/activity-types.js";
 
@@ -130,6 +130,7 @@ declare global {
     type CreateOrganization = create.CreateOrganization;
     type OrganizationForCreate = create.OrganizationForCreate;
     type UserForCreate = create.UserForCreate;
+    type UserForInvite = user.UserForInvite;
 
     // Subscription Info
     type SubscriptionInfo = subscription.SubscriptionInfo;
