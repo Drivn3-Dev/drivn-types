@@ -55,7 +55,7 @@ export interface User {
   subsidiaryId?: string;
 
   // The Status Of The User
-  status: "ACTIVE" | "REMOVED" | "INVITED";
+  status: "ACTIVE" | "REMOVED" | "INVITED" | "DECLINED";
 }
 
 export interface UserForInvite extends Drivn.UserForCreate {
