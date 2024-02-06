@@ -21,6 +21,7 @@ export type UserForCreate = Omit<
   | "isAdmin"
   | "anonymous"
   | "isOwner"
+  | "status"
 >;
 
 export interface OrganizationForCreate

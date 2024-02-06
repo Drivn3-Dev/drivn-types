@@ -53,4 +53,7 @@ export interface User {
 
   // The Subsidiary Id
   subsidiaryId?: string;
+
+  // The Status Of The User
+  status: "ACTIVE" | "REMOVED" | "INVITED";
 }
