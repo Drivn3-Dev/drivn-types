@@ -39,6 +39,7 @@ export const EMISSIONS_FACTORS = {
 export * from "./errors/drivn-error.js";
 export * from "./tracking/activity-types.js";
 export * from "./organization/subscription-info.js";
+export * from "./routes/index.js"
 
 import * as ac from "./tracking/activity-types.js";
 
