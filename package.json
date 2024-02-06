@@ -1,13 +1,13 @@
 {
   "name": "samuel-types",
   "private": false,
-  "version": "1.0.45",
+  "version": "1.0.46",
   "description": "The types for the samuel",
   "main": "dist/index.js",
   "scripts": {
     "build": "npx tsc",
     "github": "git add . && git commit -m \"updated types\" && git push origin develop",
-    "prepublishOnly": "npx tsc && npm run github && npm version patch" 
+    "prepublishOnly": "npx tsc && npm run github && npm version patch"
   },
   "type": "module",
   "types": "dist/index.d.ts",
