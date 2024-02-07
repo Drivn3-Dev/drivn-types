@@ -170,7 +170,7 @@ declare global {
     type DepartmentUpdate = Omit<Department, "id" | "employees">;
     type OfficeCreate = Omit<Office, "id" | "employees" | "orgId">;
     type OfficeUpdate = Omit<Office, "id" | "orgId" | "employees">;
-    type ReportCreate = Omit<Report, "tripId" | "userId" | "id">;
+    type ReportCreate = Omit<Report, "tripId" | "userId" | "id" | "date">;
     type UserCreate = Omit<UserWithCreds, "timeAdded" | "uid">;
     type UserUpdate = Partial<Omit<User, "uid" | "timeAdded">>;
     type ToggleAnonymous = {
