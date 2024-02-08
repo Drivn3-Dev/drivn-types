@@ -152,6 +152,9 @@ declare global {
 
     type TripSummary = trip_summary.TripSummary;
 
+    type VehicleMakeResponse = { makes: Drivn.VehicleMake[]; total: number };
+    type VehicleModelResponse = { models: Drivn.VehicleModel[]; total: number };
+
     // Request Types
     type OfficeResponse = { offices: Office[]; total: number };
     type DepartmentResponse = {

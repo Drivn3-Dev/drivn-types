@@ -13,7 +13,7 @@ export interface User {
   pushToken?: string;
 
   // The ID Of The Current In-Use Vehicle
-  currentVehicleId?: string;
+  currentVehicleId?: string | null;
 
   // The User Profile Image URL
   image?: string;
