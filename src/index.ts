@@ -77,7 +77,7 @@ import * as noauth from "./props/no-auth.js";
 import * as subsidiary from "./organization/subsidiary.js";
 import * as analytics from "./analytics/analytics.js";
 import * as support from "./analytics/ticket.js";
-import { TripSummary } from "./tracking/trip-summary.js";
+import * as trip_summary from "./tracking/trip-summary.js";
 
 declare global {
   namespace Drivn {
@@ -150,6 +150,8 @@ declare global {
     type SupportTicket = support.SupportTicket;
     type TicketMessage = support.TicketMessage;
 
+    type TripSummary = trip_summary.TripSummary;
+
     // Request Types
     type OfficeResponse = { offices: Office[]; total: number };
     type DepartmentResponse = {
@@ -161,7 +163,7 @@ declare global {
       total: number;
     };
     type TripResponse = {
-      trips: TripSummary[];
+      trips: trip_summary.TripSummary[];
       total: number;
     };
     type AnalyticsResponse = {
