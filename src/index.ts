@@ -36,6 +36,7 @@ export const EMISSIONS_FACTORS = {
   [ActivityType.EV]: 0.054796,
 };
 
+export * from "./helpers/date.js";
 export * from "./errors/drivn-error.js";
 export * from "./tracking/activity-types.js";
 export * from "./organization/subscription-info.js";
@@ -76,6 +77,7 @@ import * as noauth from "./props/no-auth.js";
 import * as subsidiary from "./organization/subsidiary.js";
 import * as analytics from "./analytics/analytics.js";
 import * as support from "./analytics/ticket.js";
+import { TripSummary } from "./tracking/trip-summary.js";
 
 declare global {
   namespace Drivn {
@@ -159,7 +161,7 @@ declare global {
       total: number;
     };
     type TripResponse = {
-      trips: PastTrip[];
+      trips: TripSummary[];
       total: number;
     };
     type AnalyticsResponse = {
