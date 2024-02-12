@@ -25,4 +25,7 @@ export interface Office extends Address {
 
   // The Subsidiary Id
   subsidiaryId?: string;
+
+  // Is The Department Removed
+  removed: boolean;
 }

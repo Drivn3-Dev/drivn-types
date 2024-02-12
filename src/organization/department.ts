@@ -23,4 +23,7 @@ export interface Department {
 
   // The Subsidiary Id
   subsidiaryId?: string;
+
+  // Is The Department Removed
+  removed: boolean;
 }
