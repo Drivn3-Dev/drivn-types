@@ -5,6 +5,9 @@ export interface Location {
 
   // The Location Latitude
   lat: number;
+
+  // The accuracy of the location in meters, if available
+  accuracy?: number;
 }
 
 export interface LocationTimestamp extends Location {

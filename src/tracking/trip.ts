@@ -17,6 +17,9 @@ export interface Segment {
   // Start The Location Latitude
   startLat: number;
 
+  // Start The Location Accuracy
+  startAccuracy?: number;
+
   // Start The Time When The Distance Was Logged
   startTime: string;
 
@@ -25,6 +28,9 @@ export interface Segment {
 
   // The Location Latitude
   endLat: number;
+
+  // The Location Accuracy
+  endAccuracy?: number;
 
   // The Time When The Distance Was Logged
   endTime: string;
