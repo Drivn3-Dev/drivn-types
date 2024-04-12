@@ -15,5 +15,5 @@ export interface TripSummary {
   activityTypes: string[];
 
   /** Boolean stating if the trip has been confirmed */
-  hasBeenConfirmed: boolean;
+  correct: boolean;
 }
