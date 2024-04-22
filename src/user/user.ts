@@ -18,7 +18,9 @@ export interface User {
   // The User Profile Image URL
   image?: string;
 
-  // The User Vehicles
+  /**
+   * @deprecated The User Vehicles
+   */
   vehicleIds: string[];
 
   // The User's Notifications

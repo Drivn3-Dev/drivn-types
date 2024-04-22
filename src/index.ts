@@ -41,6 +41,11 @@ export * from "./errors/drivn-error.js";
 export * from "./tracking/activity-types.js";
 export * from "./organization/subscription-info.js";
 export * from "./routes/index.js";
+export {
+  getVehicleEmissionsKey,
+  getEmissionsPerKilometerFromVehicle,
+  getEmissionsPerKilometerFromKey,
+} from "./vehicles/vehicle-and-emissions.js";
 
 import * as ac from "./tracking/activity-types.js";
 
@@ -78,6 +83,7 @@ import * as subsidiary from "./organization/subsidiary.js";
 import * as analytics from "./analytics/analytics.js";
 import * as support from "./analytics/ticket.js";
 import * as trip_summary from "./tracking/trip-summary.js";
+import * as vehicle_and_emissions from "./vehicles/vehicle-and-emissions.js";
 
 declare global {
   namespace Drivn {
@@ -120,6 +126,14 @@ declare global {
     type VehicleMake = make.VehicleMake;
     type VehicleModel = model.VehicleModel;
     type UserVehicle = model.UserVehicle;
+    type VehicleEmissions = vehicle_and_emissions.VehicleTypes;
+    type CarFuelTypes = vehicle_and_emissions.CarFuelTypes;
+    type MotorbikeFuelTypes = vehicle_and_emissions.MotorbikeFuelTypes;
+    type VehicleType = vehicle_and_emissions.VehicleSizes;
+    type CarEmissions = vehicle_and_emissions.CarEmissions;
+    type MotorbikeEmissions = vehicle_and_emissions.MotorbikeEmissions;
+    type VehicleSizes = vehicle_and_emissions.VehicleSizes;
+    type VehiclePreferences = vehicle_and_emissions.VehiclePreferences;
 
     // Props Types
     type TeamMember = team.TeamMember;

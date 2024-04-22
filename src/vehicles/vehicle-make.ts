@@ -1,3 +1,6 @@
+/**
+ * @deprecated Use VehicleEmissions Instead
+ */
 export interface VehicleMake {
   // The Make ID
   make_id: string;

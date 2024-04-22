@@ -1,3 +1,6 @@
+/**
+ * @deprecated Use VehicleEmissions Instead
+ */
 export interface VehicleModel {
   // The Model ID
   model_id: string;
@@ -19,4 +22,4 @@ export interface VehicleModel {
 }
 
 // Since All User Vehicles Require Emissions, This Type Will Be Used For It
-export type UserVehicle = Required<VehicleModel>
+export type UserVehicle = Required<VehicleModel>;
