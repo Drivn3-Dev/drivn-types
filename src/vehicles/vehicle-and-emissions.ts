@@ -67,7 +67,7 @@ const emissionsData: Record<string, Record<string, Record<string, number>>> = {
       "small": 0.08319,
       "medium": 0.10108,
       "large": 0.13252,
-      "average": 0.11367,
+      "average": 0.113675,
     },
   },
 };
