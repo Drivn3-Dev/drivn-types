@@ -21,5 +21,5 @@ export interface VehicleModel {
   emissions?: number;
 }
 
-// Since All User Vehicles Require Emissions, This Type Will Be Used For It
+// Since All User Vehicles Require Emissions, This Type Will Be Used For It Instead
 export type UserVehicle = Required<VehicleModel>;
