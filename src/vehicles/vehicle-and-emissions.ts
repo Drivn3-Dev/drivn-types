@@ -110,4 +110,5 @@ export interface VehiclePreferences {
   nickName: string;
   vehicleEmissionsKey: string;
   userId: string;
+  preferenceId: string;
 }
