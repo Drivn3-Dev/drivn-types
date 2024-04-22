@@ -25,7 +25,7 @@ const motorbike: MotorbikeEmissions = {
   emissionsPerKilometer: 0.08319,
 };
 
-// Test the getVehicleEmissionsKey function
+// Test the getVehicleEmissionsKey functions
 const key = getVehicleEmissionsKey(car);
 console.log(key); // Output should be: "car_small_petrol"
 const emissions = getEmissionsPerKilometerFromVehicle(car);
