@@ -1,7 +1,7 @@
 import {
-  CarEmissions,
+  CarConfiguration,
   CarFuelTypes,
-  MotorbikeEmissions,
+  MotorbikeConfiguration,
   MotorbikeFuelTypes,
   VehicleSizes,
   VehicleTypes,
@@ -11,18 +11,16 @@ import {
 } from "./vehicle-and-emissions.js";
 
 // Create a CarEmissions object
-const car: CarEmissions = {
+const car: CarConfiguration = {
   vehicleType: VehicleTypes.CAR,
   fuelType: CarFuelTypes.PETROL,
   vehicleSize: VehicleSizes.SMALL,
-  emissionsPerKilometer: 0.140798534,
 };
 
-const motorbike: MotorbikeEmissions = {
+const motorbike: MotorbikeConfiguration = {
   vehicleType: VehicleTypes.MOTORBIKE,
   fuelType: MotorbikeFuelTypes.PETROL,
   vehicleSize: VehicleSizes.MEDIUM,
-  emissionsPerKilometer: 0.08319,
 };
 
 // Test the getVehicleEmissionsKey functions

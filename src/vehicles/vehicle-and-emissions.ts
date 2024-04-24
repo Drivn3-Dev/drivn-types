@@ -21,18 +21,17 @@ export enum VehicleSizes {
   AVERAGE = "average",
 }
 
-export interface CarEmissions extends VehicleEmissions {
+export interface CarConfiguration extends VehicleConfiguration {
   fuelType: CarFuelTypes;
 }
 
-export interface MotorbikeEmissions extends VehicleEmissions {
+export interface MotorbikeConfiguration extends VehicleConfiguration {
   fuelType: MotorbikeFuelTypes;
 }
 
-interface VehicleEmissions {
+interface VehicleConfiguration {
   vehicleType: VehicleTypes;
   vehicleSize: VehicleSizes;
-  emissionsPerKilometer: number;
 }
 
 const emissionsData: Record<string, Record<string, Record<string, number>>> = {
@@ -73,13 +72,13 @@ const emissionsData: Record<string, Record<string, Record<string, number>>> = {
 };
 
 export function getVehicleEmissionsKey(
-  vehicle: CarEmissions | MotorbikeEmissions
+  vehicle: CarConfiguration | MotorbikeConfiguration
 ): string {
   return `${vehicle.vehicleType}_${vehicle.fuelType}_${vehicle.vehicleSize}`;
 }
 
 export function getEmissionsPerKilometerFromVehicle(
-  vehicle: CarEmissions | MotorbikeEmissions
+  vehicle: CarConfiguration | MotorbikeConfiguration
 ): number | undefined {
   const key = getVehicleEmissionsKey(vehicle);
   return getEmissionsPerKilometerFromKey(key);
