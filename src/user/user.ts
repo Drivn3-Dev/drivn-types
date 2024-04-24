@@ -12,7 +12,7 @@ export interface User {
   // The apns Token
   pushToken?: string;
   /**
-   * @deprecated The User's Current Vehicle. Use PreferredUserVehicleId Instead
+   * @deprecated The User's Current Vehicle. Use PreferredUserVehicleId Instead. This Field Will Be Removed In The Future
    */
   // The ID Of The Current In-Use Vehicle
   currentVehicleId?: string | null;
