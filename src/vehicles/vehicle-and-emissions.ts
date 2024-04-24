@@ -106,9 +106,9 @@ export function getEmissionsPerKilometerFromKey(
   return undefined;
 }
 
-export interface VehiclePreferences {
+export interface UserVehicleSelection {
   nickName: string;
   vehicleEmissionsKey: string;
   userId: string;
-  preferenceId: string;
+  id: string;
 }

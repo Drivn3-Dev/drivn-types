@@ -133,7 +133,7 @@ declare global {
     type CarEmissions = vehicle_and_emissions.CarEmissions;
     type MotorbikeEmissions = vehicle_and_emissions.MotorbikeEmissions;
     type VehicleSizes = vehicle_and_emissions.VehicleSizes;
-    type VehiclePreferences = vehicle_and_emissions.VehiclePreferences;
+    type UserVehicleSelection = vehicle_and_emissions.UserVehicleSelection;
 
     // Props Types
     type TeamMember = team.TeamMember;
