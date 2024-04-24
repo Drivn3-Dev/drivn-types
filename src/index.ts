@@ -202,5 +202,8 @@ declare global {
       UserVehicleSelection,
       "id" | "userId"
     >;
+    type UserVehicleSelectionUpdate = Partial<
+      Omit<UserVehicleSelection, "userId" | "id">
+    >;
   }
 }
