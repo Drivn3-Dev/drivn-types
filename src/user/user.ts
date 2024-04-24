@@ -12,19 +12,19 @@ export interface User {
   // The apns Token
   pushToken?: string;
   /**
-   * @deprecated The User's Current Vehicle. Use PreferredVehicleId Instead
+   * @deprecated The User's Current Vehicle. Use PreferredUserVehicleId Instead
    */
   // The ID Of The Current In-Use Vehicle
   currentVehicleId?: string | null;
 
   // The User's Preferred Vehicle
-  preferredVehicleId?: string;
+  preferredUserVehicleId?: string;
 
   // The User Profile Image URL
   image?: string;
 
   /**
-   * @deprecated The User Vehicles. Query The Vehicles Collection Instead
+   * @deprecated The User Vehicles. Query The User Vehicles Collection Instead
    */
   vehicleIds: string[];
 
