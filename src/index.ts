@@ -45,6 +45,7 @@ export {
   getVehicleEmissionsKey,
   getEmissionsPerKilometerFromVehicle,
   getEmissionsPerKilometerFromKey,
+  getEmissionsPerKilometerFromUserVehicleSelection,
 } from "./vehicles/vehicle-and-emissions.js";
 
 import * as ac from "./tracking/activity-types.js";

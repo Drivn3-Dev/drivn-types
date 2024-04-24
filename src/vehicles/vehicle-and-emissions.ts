@@ -34,6 +34,15 @@ interface VehicleConfiguration {
   vehicleSize: VehicleSizes;
 }
 
+export interface UserVehicleSelection {
+  nickName: string;
+  vehicleType: VehicleTypes;
+  vehicleSize: VehicleSizes;
+  fuelType: CarFuelTypes | MotorbikeFuelTypes;
+  userId: string;
+  id: string;
+}
+
 const emissionsData: Record<string, Record<string, Record<string, number>>> = {
   "car": {
     "petrol": {
@@ -71,6 +80,13 @@ const emissionsData: Record<string, Record<string, Record<string, number>>> = {
   },
 };
 
+export function getEmissionsPerKilometerFromUserVehicleSelection(
+  userVehicleSelection: UserVehicleSelection
+): number | undefined {
+  const key = getVehicleEmissionsKey(userVehicleSelection);
+  return getEmissionsPerKilometerFromKey(key);
+}
+
 export function getVehicleEmissionsKey(
   vehicle: CarConfiguration | MotorbikeConfiguration
 ): string {
@@ -103,11 +119,4 @@ export function getEmissionsPerKilometerFromKey(
 
   // If the vehicleType, fuelType, or vehicleSize do not exist in the emissionsData object, return undefined
   return undefined;
-}
-
-export interface UserVehicleSelection {
-  nickName: string;
-  vehicleEmissionsKey: string;
-  userId: string;
-  id: string;
 }
