@@ -11,15 +11,20 @@ export interface User {
 
   // The apns Token
   pushToken?: string;
-
+  /**
+   * @deprecated The User's Current Vehicle. Use PreferredVehicleId Instead
+   */
   // The ID Of The Current In-Use Vehicle
   currentVehicleId?: string | null;
+
+  // The User's Preferred Vehicle
+  preferredVehicleId?: string;
 
   // The User Profile Image URL
   image?: string;
 
   /**
-   * @deprecated The User Vehicles
+   * @deprecated The User Vehicles. Query The Vehicles Collection Instead
    */
   vehicleIds: string[];
 
