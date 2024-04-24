@@ -198,5 +198,9 @@ declare global {
       anonymous: boolean;
     };
     type OrganizationUpdate = Partial<OrganizationForCreate>;
+    type UserVehicleSelectionCreate = Omit<
+      UserVehicleSelection,
+      "id" | "userId"
+    >;
   }
 }
