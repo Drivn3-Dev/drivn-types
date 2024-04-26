@@ -1,44 +1,8 @@
-export enum VehicleTypes {
-  CAR = "car",
-  MOTORBIKE = "motorbike",
-}
-
-export enum CarFuelTypes {
-  PETROL = "petrol",
-  DIESEL = "diesel",
-  ELECTRIC = "electric",
-  HYBRID = "hybrid",
-}
-
-export enum MotorbikeFuelTypes {
-  PETROL = "petrol",
-}
-
-export enum VehicleSizes {
-  SMALL = "small",
-  MEDIUM = "medium",
-  LARGE = "large",
-  AVERAGE = "average",
-}
-
-export interface CarConfiguration extends VehicleConfiguration {
-  fuelType: CarFuelTypes;
-}
-
-export interface MotorbikeConfiguration extends VehicleConfiguration {
-  fuelType: MotorbikeFuelTypes;
-}
-
-interface VehicleConfiguration {
-  vehicleType: VehicleTypes;
-  vehicleSize: VehicleSizes;
-}
-
 export interface UserVehicleSelection {
   nickName: string;
-  vehicleType: VehicleTypes;
-  vehicleSize: VehicleSizes;
-  fuelType: CarFuelTypes | MotorbikeFuelTypes;
+  vehicleType: string;
+  vehicleSize: string;
+  fuelType: string;
   userId: string;
   id: string;
 }
@@ -80,43 +44,38 @@ const emissionsData: Record<string, Record<string, Record<string, number>>> = {
   },
 };
 
-export function getEmissionsPerKilometerFromUserVehicleSelection(
-  userVehicleSelection: UserVehicleSelection
-): number | undefined {
-  const key = getVehicleEmissionsKey(userVehicleSelection);
-  return getEmissionsPerKilometerFromKey(key);
+export function getVehicleTypes(): string[] {
+  return Object.keys(emissionsData);
 }
 
-export function getVehicleEmissionsKey(
-  vehicle: CarConfiguration | MotorbikeConfiguration
-): string {
-  return `${vehicle.vehicleType}_${vehicle.fuelType}_${vehicle.vehicleSize}`;
+export function getVehicleFuelTypes(vehicleType: string): string[] {
+  if (emissionsData[vehicleType]) {
+    return Object.keys(emissionsData[vehicleType]);
+  }
+  return [];
 }
 
-export function getEmissionsPerKilometerFromVehicle(
-  vehicle: CarConfiguration | MotorbikeConfiguration
-): number | undefined {
-  const key = getVehicleEmissionsKey(vehicle);
-  return getEmissionsPerKilometerFromKey(key);
+export function getVehicleFuelTypeSizes(
+  vehicleType: string,
+  fuelType: string
+): string[] {
+  if (emissionsData[vehicleType] && emissionsData[vehicleType][fuelType]) {
+    return Object.keys(emissionsData[vehicleType][fuelType]);
+  }
+  return [];
 }
 
-export function getEmissionsPerKilometerFromKey(
-  vehicleEmissionsKey: string
+export function getEmissionsPerKilometer(
+  vehicleType: string,
+  fuelType: string,
+  vehicleSize: string
 ): number | undefined {
-  // Split the key into its components
-  const [vehicleType, fuelType, vehicleSize] = vehicleEmissionsKey.split("_");
-
-  // Check if the vehicleType, fuelType, and vehicleSize exist in the emissionsData object
   if (
     emissionsData[vehicleType] &&
     emissionsData[vehicleType][fuelType] &&
     emissionsData[vehicleType][fuelType][vehicleSize]
   ) {
-    // Look up the emissions data for the given vehicle key
-    const emissionsPerKm = emissionsData[vehicleType][fuelType][vehicleSize];
-    return emissionsPerKm;
+    return emissionsData[vehicleType][fuelType][vehicleSize];
   }
-
-  // If the vehicleType, fuelType, or vehicleSize do not exist in the emissionsData object, return undefined
   return undefined;
 }

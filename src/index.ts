@@ -42,10 +42,10 @@ export * from "./tracking/activity-types.js";
 export * from "./organization/subscription-info.js";
 export * from "./routes/index.js";
 export {
-  getVehicleEmissionsKey,
-  getEmissionsPerKilometerFromVehicle,
-  getEmissionsPerKilometerFromKey,
-  getEmissionsPerKilometerFromUserVehicleSelection,
+  getVehicleTypes,
+  getVehicleFuelTypes,
+  getVehicleFuelTypeSizes,
+  getEmissionsPerKilometer,
 } from "./vehicles/vehicle-and-emissions.js";
 
 import * as ac from "./tracking/activity-types.js";
@@ -127,13 +127,6 @@ declare global {
     type VehicleMake = make.VehicleMake;
     type VehicleModel = model.VehicleModel;
     type UserVehicle = model.UserVehicle;
-    type VehicleTypes = vehicle_and_emissions.VehicleTypes;
-    type CarFuelTypes = vehicle_and_emissions.CarFuelTypes;
-    type MotorbikeFuelTypes = vehicle_and_emissions.MotorbikeFuelTypes;
-    type VehicleSizes = vehicle_and_emissions.VehicleSizes;
-
-    type CarConfiguration = vehicle_and_emissions.CarConfiguration;
-    type MotorbikeConfiguration = vehicle_and_emissions.MotorbikeConfiguration;
     type UserVehicleSelection = vehicle_and_emissions.UserVehicleSelection;
 
     // Props Types

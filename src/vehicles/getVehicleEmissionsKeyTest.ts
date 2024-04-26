@@ -1,36 +1,25 @@
 import {
-  CarConfiguration,
-  CarFuelTypes,
-  MotorbikeConfiguration,
-  MotorbikeFuelTypes,
-  VehicleSizes,
-  VehicleTypes,
-  getEmissionsPerKilometerFromKey,
-  getEmissionsPerKilometerFromVehicle,
-  getVehicleEmissionsKey,
+  getEmissionsPerKilometer,
+  getVehicleFuelTypeSizes,
+  getVehicleFuelTypes,
+  getVehicleTypes,
 } from "./vehicle-and-emissions.js";
 
-// Create a CarEmissions object
-const car: CarConfiguration = {
-  vehicleType: VehicleTypes.CAR,
-  fuelType: CarFuelTypes.PETROL,
-  vehicleSize: VehicleSizes.SMALL,
-};
+const vehicleTypes = getVehicleTypes();
+console.log(vehicleTypes); // Output should be: ["car", "motorbike"]
 
-const motorbike: MotorbikeConfiguration = {
-  vehicleType: VehicleTypes.MOTORBIKE,
-  fuelType: MotorbikeFuelTypes.PETROL,
-  vehicleSize: VehicleSizes.MEDIUM,
-};
+const fuelTypes = getVehicleFuelTypes(vehicleTypes[0]);
 
-// Test the getVehicleEmissionsKey functions
-const key = getVehicleEmissionsKey(car);
-console.log(key); // Output should be: "car_small_petrol"
-const emissions = getEmissionsPerKilometerFromVehicle(car);
+console.log(fuelTypes); // Output should be: ["petrol", "diesel", "hybrid", "electric"]
+
+const fuelTypeSizes = getVehicleFuelTypeSizes(vehicleTypes[0], fuelTypes[0]);
+
+console.log(fuelTypeSizes); // Output should be: ["small", "medium", "large", "average"]
+
+const emissions = getEmissionsPerKilometer(
+  vehicleTypes[0],
+  fuelTypes[0],
+  fuelTypeSizes[0]
+);
+
 console.log(emissions); // Output should be: 0.140798534
-
-const emissions2 = getEmissionsPerKilometerFromKey(key);
-console.log(emissions2);
-
-const emissions3 = getEmissionsPerKilometerFromVehicle(motorbike);
-console.log(emissions3);
