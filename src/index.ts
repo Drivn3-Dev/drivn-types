@@ -127,13 +127,13 @@ declare global {
     type VehicleMake = make.VehicleMake;
     type VehicleModel = model.VehicleModel;
     type UserVehicle = model.UserVehicle;
-    type VehicleEmissions = vehicle_and_emissions.VehicleTypes;
+    type VehicleTypes = vehicle_and_emissions.VehicleTypes;
     type CarFuelTypes = vehicle_and_emissions.CarFuelTypes;
     type MotorbikeFuelTypes = vehicle_and_emissions.MotorbikeFuelTypes;
-    type VehicleType = vehicle_and_emissions.VehicleSizes;
+    type VehicleSizes = vehicle_and_emissions.VehicleSizes;
+
     type CarConfiguration = vehicle_and_emissions.CarConfiguration;
     type MotorbikeConfiguration = vehicle_and_emissions.MotorbikeConfiguration;
-    type VehicleSizes = vehicle_and_emissions.VehicleSizes;
     type UserVehicleSelection = vehicle_and_emissions.UserVehicleSelection;
 
     // Props Types
