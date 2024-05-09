@@ -49,8 +49,13 @@ export interface PastTrip {
   // The Trip
   trip: Trip;
 
-  // The Vehicle Used In The Trip
+  /**
+   * @deprecated The Vehicle Used In The Trip. Use preferredVehicleId Instead
+   */
   vehicleId?: string;
+
+  // The id of the preffered vehicle for the trip
+  preferredVehicleId?: string;
 
   // The Office ID
   officeId: string;
