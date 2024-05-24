@@ -77,4 +77,7 @@ export interface PastTrip {
 
   // The Analytics Id For The Trip
   analyticsIds: string[];
+
+  // The Version Of The PastTrip Type
+  version: number;
 }
