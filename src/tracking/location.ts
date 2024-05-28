@@ -8,8 +8,6 @@ export interface Location {
 
   // The accuracy of the location in meters, if available
   inaccuracy?: number;
-
-  // The speed of the location in
 }
 
 export interface LocationTimestamp extends Location {
@@ -33,10 +31,6 @@ export interface LocationTimestamp extends Location {
    * The confidence of the reported device motion activity.
    */
   motionActivityConfidence?: number;
-  /**
-   * The altitude of this location in meters above the WGS84 reference ellipsoid.
-   */
-  ellipsoidal_altitude?: number;
 }
 
 export type CurrentDrive = LocationTimestamp[];
