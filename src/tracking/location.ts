@@ -32,7 +32,9 @@ export interface LocationTimestamp extends Location {
    */
   motionActivityConfidence?: number;
 
-  //Altitude of the location in meters, if available
+  /**
+   * The altitude of this location in meters above the WGS84 reference ellipsoid.
+   */
   altitude?: number;
 
   // The altitude accuracy of the location in meters, if available
