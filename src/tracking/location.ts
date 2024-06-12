@@ -31,6 +31,12 @@ export interface LocationTimestamp extends Location {
    * The confidence of the reported device motion activity.
    */
   motionActivityConfidence?: number;
+
+  //Altitude of the location in meters, if available
+  altitude?: number;
+
+  // The altitude accuracy of the location in meters, if available
+  altitudeAccuracy?: number;
 }
 
 export type CurrentDrive = LocationTimestamp[];

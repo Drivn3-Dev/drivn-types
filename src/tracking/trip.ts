@@ -1,4 +1,5 @@
 import { ActivityType } from "./activity-types.js";
+import { LocationTimestamp } from "./location.js";
 
 export interface Segment {
   // The ID Of The
@@ -20,6 +21,9 @@ export interface Segment {
   // Start The Location Inaccuracy
   startInaccuracy?: number;
 
+  // Start Locationtimestamp
+  startLocationTimestamp?: LocationTimestamp;
+
   // Start The Time When The Distance Was Logged
   startTime: string;
 
@@ -34,6 +38,9 @@ export interface Segment {
 
   // The Time When The Distance Was Logged
   endTime: string;
+
+  // End Locationtimestamp
+  endLocationTimestamp?: LocationTimestamp;
 
   // The Speed, in km/h
   speed?: number;
@@ -79,5 +86,8 @@ export interface PastTrip {
   analyticsIds: string[];
 
   // The Version Of The PastTrip Type
-  version: number;
+  version?: number;
+
+  // OS (android, ios)
+  os?: string;
 }
