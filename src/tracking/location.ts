@@ -49,4 +49,13 @@ export interface LogRequestBody {
 
   // Optional Trip Id
   tripId?: string;
+
+  // The Device Model (e.g. iPhone 12 Pro Max, Samsung Galaxy S21 Ultra)
+  deviceModel?: string;
+
+  // Optional The OS version of the device (e.g. 17.5.1)
+  osVersion?: string;
+
+  // Optional Platform (e.g. iOS, Android)
+  platform?: string;
 }
