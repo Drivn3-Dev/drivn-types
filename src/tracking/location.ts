@@ -46,4 +46,7 @@ export type CurrentDrive = LocationTimestamp[];
 export interface LogRequestBody {
   // The Current Date Time
   locations: Drivn.CurrentDrive;
+
+  // Optional Trip Id
+  tripId?: string;
 }
