@@ -58,4 +58,7 @@ export interface LogRequestBody {
 
   // Optional Platform (e.g. iOS, Android)
   platform?: string;
+
+  // Optional If Non - Work Related Trip
+  private?: boolean;
 }

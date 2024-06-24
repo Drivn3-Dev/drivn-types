@@ -96,4 +96,7 @@ export interface PastTrip {
 
   // Optional Platform (e.g. iOS, Android)
   platform?: string;
+
+  // Optional boolean stating if the trip was private
+  private?: boolean;
 }
