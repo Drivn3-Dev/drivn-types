@@ -60,5 +60,5 @@ export interface LogRequestBody {
   platform?: string;
 
   // Optional If Non - Work Related Trip
-  private?: boolean;
+  isPrivate?: boolean;
 }
