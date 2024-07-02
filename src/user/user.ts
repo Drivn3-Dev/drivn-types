@@ -63,9 +63,6 @@ export interface User {
 
   // The Status Of The User
   status: "ACTIVE" | "REMOVED" | "INVITED" | "DECLINED";
-
-  // The last time the app sent that tracking works for the user
-  lastUploadedTrackingWorks?: Date;
 }
 
 export interface UserForInvite extends Drivn.UserForCreate {
