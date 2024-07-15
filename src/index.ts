@@ -84,6 +84,7 @@ import * as subsidiary from "./organization/subsidiary.js";
 import * as analytics from "./analytics/analytics.js";
 import * as support from "./analytics/ticket.js";
 import * as trip_summary from "./tracking/trip-summary.js";
+import * as new_trip from "./tracking/entire-trip.js";
 import * as vehicle_and_emissions from "./vehicles/vehicle-and-emissions.js";
 
 declare global {
@@ -100,6 +101,11 @@ declare global {
     type LocationTimestamp = location.LocationTimestamp;
     type Report = report.Report;
     type TripCreate = location.LogRequestBody;
+    // The new trip types
+    type TripInfo = new_trip.TripInfo;
+    type ActivityIndex = new_trip.ActivityIndex;
+    type Triplocation = new_trip.Triplocation;
+    type EntireTrip = new_trip.EntireTrip;
 
     // Organization Types
     type Organization = org.Organization;
