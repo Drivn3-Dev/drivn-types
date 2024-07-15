@@ -106,6 +106,7 @@ declare global {
     type ActivityIndex = new_trip.ActivityIndex;
     type Triplocation = new_trip.Triplocation;
     type EntireTrip = new_trip.EntireTrip;
+    type CreateTripRequestBody = new_trip.CreateTripRequestBody;
 
     // Organization Types
     type Organization = org.Organization;
