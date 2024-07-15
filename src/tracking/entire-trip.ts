@@ -36,10 +36,10 @@ export interface TripInfo {
   isPrivate?: boolean;
 
   // Optional when the user left the office
-  officeCheckInTime?: string;
+  officeCheckInTime?: Date;
 
   // Optional when the user returned to the office
-  officeCheckOutTime?: string;
+  officeCheckOutTime?: Date;
 }
 
 export interface ActivityIndex {
