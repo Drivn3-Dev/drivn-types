@@ -9,13 +9,13 @@ export interface TripInfo {
   carEmissionsPerKilometer?: number;
 
   // If stretches deemed as bike were ebike stretches
-  usesEbike?: boolean;
+  usedEbike?: boolean;
 
   // The User Id Of The Trip
   userId: string;
 
-  // The Office ID
-  officeId: string;
+  // The Office ID if it was not a private trip
+  officeId?: string;
 
   // The Creation Date Of The Trip
   createdAt: Date;
@@ -34,6 +34,12 @@ export interface TripInfo {
 
   // Optional boolean stating if the trip was private
   isPrivate?: boolean;
+
+  // Optional when the user left the office
+  officeCheckInTime?: string;
+
+  // Optional when the user returned to the office
+  officeCheckOutTime?: string;
 }
 
 export interface ActivityIndex {
