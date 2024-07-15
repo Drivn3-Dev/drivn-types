@@ -117,8 +117,8 @@ export interface CreateTripRequestBody {
 
   // If the trip was private
   isPrivate?: boolean;
-  officeCheckInTime?: string;
-  officeCheckOutTime?: string;
+  officeCheckInTime?: Date;
+  officeCheckOutTime?: Date;
 
   // The office id if it was not a private trip
   officeId?: string;
