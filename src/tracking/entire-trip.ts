@@ -17,7 +17,7 @@ export interface TripInfo {
   // The Office ID if it was not a private trip
   officeId?: string;
 
-  // The Creation Date Of The Trip
+  // The Date The Trip Was Recorded
   tripDate: Date;
 
   // Is The Trip Marked Correct
@@ -103,4 +103,23 @@ export interface EntireTrip {
   tripInfo: TripInfo;
   activityIndices: ActivityIndex[];
   locations: Triplocation[];
+}
+
+export interface CreateTripRequestBody {
+  // The recorded locations of the trip
+  locations: Triplocation[];
+  // The id generated for the trip by the client
+  tripId?: string;
+  // Device info
+  deviceModel?: string;
+  osVersion?: string;
+  platform?: string;
+
+  // If the trip was private
+  isPrivate?: boolean;
+  officeCheckInTime?: string;
+  officeCheckOutTime?: string;
+
+  // The office id if it was not a private trip
+  officeId?: string;
 }
