@@ -18,7 +18,7 @@ export interface TripInfo {
   officeId?: string;
 
   // The Creation Date Of The Trip
-  createdAt: Date;
+  tripDate: Date;
 
   // Is The Trip Marked Correct
   correct: boolean;
