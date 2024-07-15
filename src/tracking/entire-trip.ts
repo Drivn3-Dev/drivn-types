@@ -86,6 +86,7 @@ export interface Triplocation {
 
   /**
    * The confidence of the reported device motion activity.
+   * This might be deleted in the future.
    */
   motionActivityConfidence?: number;
 
