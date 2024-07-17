@@ -61,4 +61,7 @@ export interface LogRequestBody {
 
   // Optional If Non - Work Related Trip
   private?: boolean;
+
+  // The Office ID involved in the trip (if applicable)
+  officeId?: string;
 }
