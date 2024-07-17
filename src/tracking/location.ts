@@ -61,4 +61,10 @@ export interface LogRequestBody {
 
   // Optional If Non - Work Related Trip
   private?: boolean;
+
+  // Optional when the user left the office
+  officeCheckInTime?: Date;
+
+  // Optional when the user returned to the office
+  officeCheckOutTime?: Date;
 }
