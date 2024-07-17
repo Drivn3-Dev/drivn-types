@@ -109,14 +109,14 @@ export interface CreateTripRequestBody {
   // The recorded locations of the trip
   locations: Triplocation[];
   // The id generated for the trip by the client
-  tripId?: string;
+  tripId: string;
   // Device info
-  deviceModel?: string;
-  osVersion?: string;
-  platform?: string;
+  deviceModel: string;
+  osVersion: string;
+  platform: string;
 
   // If the trip was private
-  isPrivate?: boolean;
+  isPrivate: boolean;
   officeCheckInTime?: Date;
   officeCheckOutTime?: Date;
 
