@@ -56,7 +56,7 @@ export interface ActivityIndex {
   emissionsKg: number;
 }
 
-export interface Triplocation {
+export interface TripLocation {
   // The time the location was recorded
   time: Date;
 
@@ -99,15 +99,20 @@ export interface Triplocation {
   altitudeAccuracy?: number;
 }
 
+export interface TripLocationWithIndex extends TripLocation {
+  // The index of the trip, for this datapoint
+  index: number;
+}
+
 export interface EntireTrip {
   tripInfo: TripInfo;
   activityIndices: ActivityIndex[];
-  locations: Triplocation[];
+  locations: TripLocationWithIndex[];
 }
 
 export interface CreateTripRequestBody {
   // The recorded locations of the trip
-  locations: Triplocation[];
+  locations: TripLocation[];
   // The id generated for the trip by the client
   tripId: string;
   // Device info

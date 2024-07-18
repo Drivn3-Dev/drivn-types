@@ -104,7 +104,8 @@ declare global {
     // The new trip types
     type TripInfo = new_trip.TripInfo;
     type ActivityIndex = new_trip.ActivityIndex;
-    type Triplocation = new_trip.Triplocation;
+    type TripLocation = new_trip.TripLocation;
+    type TripLocationWithIndex = new_trip.TripLocation;
     type EntireTrip = new_trip.EntireTrip;
     type CreateTripRequestBody = new_trip.CreateTripRequestBody;
 
