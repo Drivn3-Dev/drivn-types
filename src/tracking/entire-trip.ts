@@ -106,7 +106,7 @@ export interface TripLocationWithIndex extends TripLocation {
 
 export interface EntireTrip {
   tripInfo: TripInfo;
-  activityIndices: ActivityIndex[];
+  activityIndexes: ActivityIndex[];
   locations: TripLocationWithIndex[];
 }
 
