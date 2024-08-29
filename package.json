@@ -1,7 +1,7 @@
 {
   "name": "deriven-dev-types",
   "private": false,
-  "version": "1.0.103",
+  "version": "1.0.104",
   "description": "The types for deriven",
   "main": "dist/index.js",
   "scripts": {
