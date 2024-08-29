@@ -44,9 +44,9 @@ export interface User {
 
   // The Office That The User Belongs To
   officeId?: string;
-  
+
   // The Office That The User Belongs To
-  test?: string;
+  tester?: string;
 
   // Time the user leaves to go to the office
   toOffice?: string;
