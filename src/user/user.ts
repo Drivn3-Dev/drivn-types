@@ -1,3 +1,5 @@
+
+
 // The User Interface Model
 export interface User {
   // First Name
@@ -44,7 +46,7 @@ export interface User {
   officeId?: string;
 
   // When does the user leave from home
-  toOffice?: Record<string, Date>;
+  toOffice?: string;
   
   // When does the user leave from the office
   fromOffice?: Record<string, Date>;
