@@ -46,7 +46,7 @@ export interface User {
   officeId?: string;
 
   // Time the user leaves to go to the office
-  toOffice?: string;
+  toOffice?: Record<string, Date>;
   
   // When does the user leave from the office
   fromOffice?: Record<string, Date>;
