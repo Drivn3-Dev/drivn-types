@@ -8,7 +8,7 @@
     "build": "npx tsc",
     "github": "git add . && git commit -m \"updated types\" && git push origin develop",
     "prepublishOnly": "npx tsc && npm run github && npm version patch",
-    "buildAndPublish": "npx tsc && git add . && git commit -m \"updated types\" && git push origin develop && npm version patch && npm publish"
+    "buildAndPublish": "npx tsc && git add . && npm version patch && git push origin develop --follow-tags && npm publish"
   },
   "type": "module",
   "types": "dist/index.d.ts",

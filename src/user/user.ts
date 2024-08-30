@@ -48,7 +48,7 @@ export interface User {
   // Time the user leaves to go to the office
   toOffice?: Record<string, Date>;
   
-  // When does the user leave from the office
+  // Time the user leaves the office
   fromOffice?: Record<string, Date>;
 
   // Is The User An Admin Of His / Her Organization
