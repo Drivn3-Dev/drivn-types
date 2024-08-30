@@ -1,7 +1,7 @@
 {
   "name": "drivn-dev-types",
   "private": false,
-  "version": "1.0.122",
+  "version": "1.0.123",
   "description": "The types for drivn",
   "main": "dist/index.js",
   "scripts": {
