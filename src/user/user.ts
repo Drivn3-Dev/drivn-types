@@ -46,10 +46,10 @@ export interface User {
   officeId?: string;
 
   // Time the user leaves to go to the office.
-  toOffice?: Record<string, Date>;
+  toOffice?: Record<string, string>;
   
   // Time the user leaves the office to go home.
-  fromOffice?: Record<string, Date>;
+  fromOffice?: Record<string, string>;
 
   // Is The User An Admin Of His / Her Organization
   isAdmin: boolean;
