@@ -70,6 +70,9 @@ export interface PastTrip {
   // The Trip Name
   name: string;
 
+  // Whether the trip is to the office or not
+  toOffice: boolean;
+
   // The Reported Trip Id (Undefined If Not Reported)
   reported?: string;
 
