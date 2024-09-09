@@ -8,8 +8,8 @@ export interface TripSummary {
   /** Total distance covered in the trip calculated by summing distances of all individual activities */
   distance: number;
 
-  /** The start and end times of a trip */
-  tripWindow: Date[];
+  /** Start date and time of the last activity in the trip */
+  startDate: Date;
 
   /** End date and time of the last activity in the trip */
   endDate: Date;
