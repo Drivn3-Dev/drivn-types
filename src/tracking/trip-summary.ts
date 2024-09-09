@@ -17,6 +17,9 @@ export interface TripSummary {
   /** Boolean stating if the trip has been confirmed */
   correct: boolean;
 
+  /* Whether the trip is to the office or not. */
+  toOffice: boolean;
+
   /** Boolean stating if the trip was private */
   private?: boolean;
 }
