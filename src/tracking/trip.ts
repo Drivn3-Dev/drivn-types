@@ -102,4 +102,7 @@ export interface PastTrip {
 
   // Optional boolean stating if the trip was private
   private?: boolean;
+
+  // If the trip is a manual check-in.
+  manual?: boolean;
 }
