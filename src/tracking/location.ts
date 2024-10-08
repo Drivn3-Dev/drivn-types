@@ -67,7 +67,4 @@ export interface LogRequestBody {
 
   // Optional when the user returned to the office
   officeCheckOutTime?: Date;
-
-  // (Optional) If the trip is a manual check-in
-  isCheckin?: boolean
 }
