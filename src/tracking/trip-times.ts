@@ -11,12 +11,15 @@ export interface TripTimes {
   /** Boolean stating if the trip has been confirmed */
   correct: boolean;
 
+  /** Unique identifier for the office (or special trip type) */
+  officeId: string;
+
   /** Whether the trip is to the office or not. */
   toOffice: boolean;
 
   /** Array of distinct activity types involved in the trip */
   activityTypes?: string[];
-  
+
   /** Boolean stating if the trip was private */
   private?: boolean;
 }
