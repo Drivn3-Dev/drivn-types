@@ -84,6 +84,7 @@ import * as subsidiary from "./organization/subsidiary.js";
 import * as analytics from "./analytics/analytics.js";
 import * as support from "./analytics/ticket.js";
 import * as trip_summary from "./tracking/trip-summary.js";
+import * as trip_times from "./tracking/trip-times.js";
 import * as new_trip from "./tracking/entire-trip.js";
 import * as vehicle_and_emissions from "./vehicles/vehicle-and-emissions.js";
 
@@ -167,6 +168,7 @@ declare global {
     type TicketMessage = support.TicketMessage;
 
     type TripSummary = trip_summary.TripSummary;
+    type TripTimes = trip_times.TripTimes;
 
     type VehicleMakeResponse = { makes: Drivn.VehicleMake[]; total: number };
     type VehicleModelResponse = { models: Drivn.VehicleModel[]; total: number };

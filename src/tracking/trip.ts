@@ -102,4 +102,7 @@ export interface PastTrip {
 
   // Optional boolean stating if the trip was private
   private?: boolean;
+
+  firstSegment?: any;
+  lastSegment?: any;
 }
