@@ -89,7 +89,7 @@ export interface PastTrip {
   analyticsIds: string[];
 
   // The Version Of The PastTrip Type
-  version?: number;
+  version?: string;
 
   // The Device Model (e.g. iPhone 12 Pro Max, Samsung Galaxy S21 Ultra)
   deviceModel?: string;
