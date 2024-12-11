@@ -56,6 +56,9 @@ export interface LogRequestBody {
   // Optional The OS version of the device (e.g. 17.5.1)
   osVersion?: string;
 
+  // Optional The App Version
+  version?: string;
+
   // Optional Platform (e.g. iOS, Android)
   platform?: string;
 
