@@ -65,6 +65,12 @@ export interface User {
 
   // The Status Of The User
   status: "ACTIVE" | "REMOVED" | "INVITED" | "DECLINED";
+
+  // The App Version
+  version?: string;
+
+  // The user's commute days
+  workDays?: Record<string, boolean>;
 }
 
 export interface UserForInvite extends Drivn.UserForCreate {
