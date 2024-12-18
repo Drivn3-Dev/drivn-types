@@ -34,7 +34,7 @@ export interface User {
   notificationIds: string[];
 
   // The Past Trip Ids
-  tripIds: string[];
+  tripIds?: string[];
 
   // The Organization ID
   organizationId: string;
