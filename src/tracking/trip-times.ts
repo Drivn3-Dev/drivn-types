@@ -22,4 +22,7 @@ export interface TripTimes {
 
   /** Boolean stating if the trip was private */
   private?: boolean;
+
+  /** Boolean stating if the trip is a "dummy" duplicate */
+  duplicate?: boolean;
 }
