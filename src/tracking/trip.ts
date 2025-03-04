@@ -49,6 +49,18 @@ export interface Segment {
 // List Of Segments
 export type Trip = Segment[];
 
+export interface NewTrip {
+  lat: number;
+  lon: number;
+  timestamp: Date;
+  accuracy: number;
+  motionActivity: string;
+  motionActivityConfidence: number;
+  altitude: number;
+  altitudeAccuracy: number;
+  activityType: string;
+}
+
 export interface PastTrip {
   // The Trip ID
   id: string;
@@ -105,4 +117,53 @@ export interface PastTrip {
 
   firstSegment?: any;
   lastSegment?: any;
+}
+
+export interface TripInfo {
+  // The Trip ID
+  id: string;
+
+  // The Trip
+  trip: NewTrip;
+
+  /**
+   * The Vehicle Used In The Trip.
+   */
+  vehicleId?: string;
+
+  // The Office ID
+  officeId: string;
+
+  // Is The Trip Marked Correct
+  correct: boolean;
+
+  // The User Id Of The Trip
+  userId: string;
+
+  // The Creation Date Of The Trip
+  uploadedAt: Date;
+
+  updatedAt: Date;
+
+  date: Date;
+
+  // The App Version
+  version?: string;
+
+  // The Device Model (e.g. iPhone 12 Pro Max, Samsung Galaxy S21 Ultra)
+  deviceModel?: string;
+
+  // Optional The OS version of the device (e.g. 17.5.1)
+  osVersion?: string;
+
+  // Optional Platform (e.g. iOS, Android)
+  platform?: string;
+
+  distance: number;
+
+  emissions: number;
+
+  activityTypes: Record<ActivityType, number>;
+
+  purpose: number;
 }
