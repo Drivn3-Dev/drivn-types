@@ -50,15 +50,15 @@ export interface Segment {
 export type Trip = Segment[];
 
 export interface NewTrip {
-  lat: number;
-  lon: number;
-  timestamp: Date;
-  accuracy: number;
-  motionActivity: string;
-  motionActivityConfidence: number;
-  altitude: number;
-  altitudeAccuracy: number;
-  activityType: string;
+  lat: number[];
+  lon: number[];
+  timestamp: Date[];
+  accuracy: number[];
+  motionActivity: string[];
+  motionActivityConfidence: number[];
+  altitude: number[];
+  altitudeAccuracy: number[];
+  activityType: string[];
 }
 
 export interface PastTrip {
