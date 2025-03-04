@@ -141,7 +141,7 @@ export interface TripInfo {
   userId: string;
 
   // The Creation Date Of The Trip
-  uploadedAt: Date;
+  createdAt: Date;
 
   updatedAt: Date;
 
