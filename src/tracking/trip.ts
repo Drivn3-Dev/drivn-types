@@ -145,8 +145,6 @@ export interface TripInfo {
 
   updatedAt: Date;
 
-  date: Date;
-
   // The App Version
   version?: string;
 
