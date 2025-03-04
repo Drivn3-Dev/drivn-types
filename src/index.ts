@@ -96,7 +96,7 @@ declare global {
     type Location = location.Location;
     type Notification = notif.Notification;
     type PastTrip = trip.PastTrip;
-    type NewTrip = trip.TripInfo;
+    type TripInfo = trip.TripInfo;
     type Trip = trip.Trip;
     type Segment = trip.Segment;
     type CurrentDrive = location.CurrentDrive;
@@ -104,7 +104,6 @@ declare global {
     type Report = report.Report;
     type TripCreate = location.LogRequestBody;
     // The new trip types
-    type TripInfo = new_trip.TripInfo;
     type ActivityIndex = new_trip.ActivityIndex;
     type TripLocation = new_trip.TripLocation;
     type TripLocationWithIndex = new_trip.TripLocationWithIndex;
