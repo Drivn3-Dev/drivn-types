@@ -1,10 +1,10 @@
 // A Singleton Location Object Instance
 export interface Location {
-  // The Location Longitude
-  lng: number;
-
   // The Location Latitude
   lat: number;
+
+  // The Location Longitude
+  lng: number;
 
   // The accuracy of the location in meters, if available
   inaccuracy?: number;
