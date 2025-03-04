@@ -4,10 +4,10 @@ export interface Notification {
   id: string;
 
   // The Title Of The Notification
-  title: string;
+  title?: string;
 
   // Content of the notification
-  body: string;
+  body?: string;
 
   // Date and time when the notification was created
   createdAt: Date;
