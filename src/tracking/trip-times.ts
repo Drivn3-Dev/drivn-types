@@ -24,5 +24,5 @@ export interface TripInfoShort {
   private?: boolean;
 
   /** The purpose of the trip */
-  purpose?: number;
+  purpose: number;
 }
