@@ -18,7 +18,7 @@ export interface TripInfoShort {
   toOffice: boolean;
 
   /** Array of distinct activity types involved in the trip */
-  activityTypes?: string[];
+  activityTypes?: Record<Drivn.ActivityType, number>;
 
   /** Boolean stating if the trip was private */
   private?: boolean;
