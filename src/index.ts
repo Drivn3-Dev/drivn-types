@@ -168,7 +168,7 @@ declare global {
     type TicketMessage = support.TicketMessage;
 
     type TripSummary = trip_summary.TripSummary;
-    type TripTimes = trip_times.TripTimes;
+    type TripTimes = trip_times.TripInfoShort;
 
     type VehicleMakeResponse = { makes: Drivn.VehicleMake[]; total: number };
     type VehicleModelResponse = { models: Drivn.VehicleModel[]; total: number };
