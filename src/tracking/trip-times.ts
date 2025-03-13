@@ -25,4 +25,7 @@ export interface TripTimes {
 
   /** Boolean stating if the trip is a "dummy" duplicate */
   duplicate?: boolean;
+
+  /** The purpose of the trip */
+  purpose?: number;
 }
