@@ -96,6 +96,7 @@ declare global {
     type Location = location.Location;
     type Notification = notif.Notification;
     type PastTrip = trip.PastTrip;
+    type NewTrip = trip.NewTrip;
     type TripInfo = trip.TripInfo;
     type Trip = trip.Trip;
     type Segment = trip.Segment;
