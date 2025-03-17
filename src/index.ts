@@ -53,6 +53,7 @@ import * as ac from "./tracking/activity-types.js";
 import * as office from "./organization/office.js";
 import * as department from "./organization/department.js";
 import * as org from "./organization/organization.js";
+import * as residence from "./organization/residence.js";
 
 import * as express from "./express/express.js";
 
@@ -116,6 +117,7 @@ declare global {
     type Office = office.Office;
     type Subsidiary = subsidiary.Subsidiary;
     type Department = department.Department;
+    type Residence = residence.Residence;
 
     // Express Types
     type Request<T = unknown> = express.Request<T>;

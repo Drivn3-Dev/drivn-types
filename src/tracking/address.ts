@@ -11,6 +11,9 @@ export interface Address extends Location {
   // The Street Name / Number For The Address
   streetNameAndNumber: string;
 
+  // The Country For The Address
+  country?: string;
+
   // The State / Province For The Address
-  state: string;
+  state?: string;
 }
