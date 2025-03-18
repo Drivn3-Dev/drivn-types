@@ -161,7 +161,7 @@ export interface TripInfo {
 
   emissions: number;
 
-  activityTypes: Record<ActivityType, Record<string, number>>;
+  activityTypes: Record<ActivityType, {distance: number, emissions: number}>;
 
   purpose: number;
 }
