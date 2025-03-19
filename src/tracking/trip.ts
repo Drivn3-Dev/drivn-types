@@ -132,10 +132,10 @@ export interface TripInfo {
   vehicleId?: string;
 
   // The Office ID
-  officeId: string;
+  officeId?: string;
 
   // Is The Trip Marked Correct
-  correct: boolean;
+  correct?: boolean;
 
   // The User Id Of The Trip
   userId: string;
