@@ -143,8 +143,6 @@ export interface TripInfo {
   // The Creation Date Of The Trip
   createdAt: Date;
 
-  updatedAt: Date;
-
   // The App Version
   version?: string;
 
