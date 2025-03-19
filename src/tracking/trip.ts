@@ -155,11 +155,11 @@ export interface TripInfo {
   // Optional Platform (e.g. iOS, Android)
   platform?: string;
 
-  distance: number;
+  distance?: number;
 
-  emissions: number;
+  emissions?: number;
 
-  activityTypes: Record<ActivityType, {distance: number, emissions: number}>;
+  activityTypes?: Record<ActivityType, {distance: number, emissions: number}>;
 
   purpose: number;
 }
