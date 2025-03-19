@@ -9,7 +9,7 @@ export interface Residence extends Address {
   uid: string;
 
   // Is the Residence Removed
-  removed: boolean;
+  removed?: boolean;
 
   // Latitude Of The Residence
   lat: number;
