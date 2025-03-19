@@ -51,7 +51,7 @@ export type Trip = Segment[];
 
 export interface NewTrip {
   lat: number[];
-  lon: number[];
+  lng: number[];
   timestamp: Date[];
   accuracy?: number[];
   motionActivity?: string[];

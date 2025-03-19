@@ -9,5 +9,5 @@ export interface Residence extends Address {
   lat: number;
 
   // Longitude Of The Residence
-  lon: number;
+  lng: number;
 }
