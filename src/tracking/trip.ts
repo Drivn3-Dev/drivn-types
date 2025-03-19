@@ -124,7 +124,7 @@ export interface TripInfo {
   id: string;
 
   // The Trip
-  trip_new: NewTrip;
+  trip_new?: NewTrip;
 
   /**
    * The Vehicle Used In The Trip.
