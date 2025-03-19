@@ -53,12 +53,12 @@ export interface NewTrip {
   lat: number[];
   lon: number[];
   timestamp: Date[];
-  accuracy: number[];
-  motionActivity: string[];
-  motionActivityConfidence: number[];
-  altitude: number[];
-  altitudeAccuracy: number[];
-  activityType: string[];
+  accuracy?: number[];
+  motionActivity?: string[];
+  motionActivityConfidence?: number[];
+  altitude?: number[];
+  altitudeAccuracy?: number[];
+  activityType?: string[];
 }
 
 export interface PastTrip {
@@ -124,7 +124,7 @@ export interface TripInfo {
   id: string;
 
   // The Trip
-  trip_new?: NewTrip;
+  trip_new: NewTrip;
 
   /**
    * The Vehicle Used In The Trip.
