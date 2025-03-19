@@ -163,6 +163,6 @@ export interface TripInfo {
 
   purpose: number;
 
-  firstTimestamp:any;
-  lastTimestamp:any;
+  firstTimestamp?: any;
+  lastTimestamp?: any;
 }
