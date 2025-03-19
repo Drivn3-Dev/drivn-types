@@ -9,13 +9,13 @@ export interface TripInfoShort {
   endDate: Date;
 
   /** Boolean stating if the trip has been confirmed */
-  correct: boolean;
+  correct?: boolean;
 
   /** Unique identifier for the office (or special trip type) */
-  officeId: string;
+  officeId?: string;
 
   /** Whether the trip is to the office or not. */
-  toOffice: boolean;
+  toOffice?: boolean;
 
   /** Array of distinct activity types involved in the trip */
   activityTypes?: Record<Drivn.ActivityType, Record<string, number>>;
