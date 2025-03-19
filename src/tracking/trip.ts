@@ -162,4 +162,7 @@ export interface TripInfo {
   activityTypes?: Record<ActivityType, {distance: number, emissions: number}>;
 
   purpose: number;
+
+  firstTimestamp:any;
+  lastTimestamp:any;
 }
