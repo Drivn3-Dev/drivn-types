@@ -5,6 +5,9 @@ export interface Residence extends Address {
   // Residence ID
   id: string;
 
+  // User ID
+  uid: string;
+
   // Latitude Of The Residence
   lat: number;
 
