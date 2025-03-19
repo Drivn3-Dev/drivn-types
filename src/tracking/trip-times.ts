@@ -14,14 +14,8 @@ export interface TripInfoShort {
   /** Unique identifier for the office (or special trip type) */
   officeId?: string;
 
-  /** Whether the trip is to the office or not. */
-  toOffice?: boolean;
-
   /** Array of distinct activity types involved in the trip */
   activityTypes?: Record<Drivn.ActivityType, Record<string, number>>;
-
-  /** Boolean stating if the trip was private */
-  private?: boolean;
 
   /** The purpose of the trip */
   purpose: number;
