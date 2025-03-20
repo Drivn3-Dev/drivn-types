@@ -162,7 +162,7 @@ declare global {
     type SubscriptionStatus = subscription.SubscriptionStatus;
 
     // Analytics Types
-    type Analytics = analytics.Analytics;
+    type Analytics = analytics.Emissions;
     type RecentDriveDate = analytics.RecentDriveDate;
     type ActivityTypeMetrics = analytics.ActivityTypeMetrics;
 

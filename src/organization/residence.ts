@@ -10,10 +10,4 @@ export interface Residence extends Address {
 
   // Is the Residence Removed
   removed?: boolean;
-
-  // Latitude Of The Residence
-  lat: number;
-
-  // Longitude Of The Residence
-  lng: number;
 }

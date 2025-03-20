@@ -1,8 +1,9 @@
 import { ActivityType } from "../index.js";
 
-export interface Analytics {
-  // The Analytics Associated Id (User Id Or Office Id Or Department Id)
-  id: string;
+export interface Emissions {
+  // Outdated
+  // The Emissions Associated Id (User Id Or Office Id Or Department Id)
+  id?: string;
 
   // The Total Number Of Trips
   totalTrips: number;
@@ -16,11 +17,13 @@ export interface Analytics {
   // All The Activity Types
   activityTypes: ActivityTypeMetrics[];
 
+  // Outdated
   // Recent Trip Analytics Ids
-  recentTripAnalyticsIds: string[];
+  recentTripAnalyticsIds?: string[];
 
+  // Outdated
   // Past Trip Analytics Ids (Not In Recent Trip Ids)
-  pastTripAnalyticsIds: string[];
+  pastTripAnalyticsIds?: string[];
 }
 
 export interface ActivityTypeMetrics {
@@ -34,11 +37,11 @@ export interface ActivityTypeMetrics {
   distance: number;
 
   // Activity Type Log Count
-  count: number;
+  count?: number;
 }
 
 type RecentDrive = Omit<
-  Analytics,
+  Emissions,
   | "pastTripAnalyticsIds"
   | "recentTripAnalyticsIds"
   | "totalTrips"
