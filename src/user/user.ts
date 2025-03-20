@@ -71,9 +71,6 @@ export interface User {
 
   // The user's commute days
   workDays?: Record<string, boolean>;
-
-  // The user's home coordinates
-  home_coords?: Drivn.Location;
 }
 
 export interface UserForInvite extends Drivn.UserForCreate {
