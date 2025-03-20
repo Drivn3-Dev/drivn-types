@@ -19,4 +19,10 @@ export interface TripInfoShort {
 
   /** The purpose of the trip */
   purpose: number;
+
+  /** The distance of the trip */
+  distance: number;
+
+  /** The total emissions of the trip */
+  emissions: number;
 }
