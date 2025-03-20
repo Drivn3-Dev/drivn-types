@@ -162,7 +162,7 @@ declare global {
     type SubscriptionStatus = subscription.SubscriptionStatus;
 
     // Analytics Types
-    type Analytics = analytics.Emissions;
+    type Emissions = analytics.Emissions;
     type RecentDriveDate = analytics.RecentDriveDate;
     type ActivityTypeMetrics = analytics.ActivityTypeMetrics;
 
@@ -192,7 +192,7 @@ declare global {
     };
     type AnalyticsResponse = {
       plottable_analytics: RecentDriveDate[];
-      entity_analytics: Analytics;
+      entity_analytics: Emissions;
     };
     type DepartmentCreate = Omit<Department, "id">;
     type DepartmentUpdate = Omit<Department, "id" | "employees">;
