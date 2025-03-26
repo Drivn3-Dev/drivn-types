@@ -67,8 +67,8 @@ export interface User {
   // The App Version
   version?: string;
 
-  // The user's commute days
-  workDays?: Record<string, boolean>;
+  // The user's residence id
+  residence?: string;
 }
 
 export interface UserForInvite extends Drivn.UserForCreate {
