@@ -1,5 +1,3 @@
-
-
 // The User Interface Model
 export interface User {
   // First Name
