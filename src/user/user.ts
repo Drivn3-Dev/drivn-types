@@ -67,6 +67,9 @@ export interface User {
   // The App Version
   version?: string;
 
+  // The user's commute days
+  workDays?: Record<string, boolean>;
+  
   // The user's residence id
   residenceId?: string;
 }
