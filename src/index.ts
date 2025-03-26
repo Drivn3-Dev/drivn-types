@@ -199,7 +199,7 @@ declare global {
     type OfficeCreate = Omit<Office, "id" | "employees" | "orgId">;
     type OfficeUpdate = Omit<Office, "id" | "orgId" | "employees">;
     type ResidenceCreate = Omit<Residence, "id" | "uid">;
-    type ResidenceUpdate = Omit<Residence, "id" | "uid">;
+    type ResidenceUpdate = Omit<Residence, "uid">;
     type ReportCreate = Omit<Report, "tripId" | "userId" | "id" | "date">;
     type UserCreate = Omit<UserWithCreds, "timeAdded" | "uid">;
     type UserUpdate = Partial<Omit<User, "uid" | "timeAdded">>;
