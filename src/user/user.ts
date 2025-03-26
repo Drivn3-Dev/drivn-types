@@ -68,7 +68,7 @@ export interface User {
   version?: string;
 
   // The user's residence id
-  residence?: string;
+  residenceId?: string;
 }
 
 export interface UserForInvite extends Drivn.UserForCreate {
