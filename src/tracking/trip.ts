@@ -163,7 +163,7 @@ export interface TripInfo {
 
   purpose: number;
 
-  note: string;
+  note?: string;
 
   firstTimestamp?: any;
   lastTimestamp?: any;
