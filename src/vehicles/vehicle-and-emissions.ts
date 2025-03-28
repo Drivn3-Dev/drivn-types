@@ -5,6 +5,7 @@ export interface UserVehicleSelection {
   fuelType: string;
   userId: string;
   id: string;
+  companyCar?: boolean;
 }
 
 const emissionsData: Record<string, Record<string, Record<string, number>>> = {
