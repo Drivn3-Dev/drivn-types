@@ -159,7 +159,7 @@ export interface TripInfo {
 
   emissions?: number;
 
-  activityTypes?: Record<ActivityType, {distance: number, emissions: number}>;
+  activityTypes?: Partial<Record<ActivityType, {distance: number, emissions: number}>>;
 
   purpose: number;
 
