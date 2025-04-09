@@ -68,7 +68,7 @@ export interface User {
   version?: string;
 
   // The user's commute days
-  workDays?: Record<string, {active: boolean, hours: string[] | null}>;
+  workDays?: Record<string, {active: boolean, hours: string[]}>;
 
   // The user's residence id
   residenceId?: string;
