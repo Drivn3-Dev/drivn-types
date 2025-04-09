@@ -75,13 +75,13 @@ export interface User {
 }
 
 export interface UserWorkDays {
-  "Monday": {active: boolean, hours: string[]};
-  "Tuesday": {active: boolean, hours: string[]};
-  "Wednesday": {active: boolean, hours: string[]};
-  "Thursday": {active: boolean, hours: string[]};
-  "Friday": {active: boolean, hours: string[]};
-  "Saturday": {active: boolean, hours: string[]};
-  "Sunday": {active: boolean, hours: string[]};
+  Monday: {active: boolean, hours: string[] | undefined};
+  Tuesday: {active: boolean, hours: string[] | undefined};
+  Wednesday: {active: boolean, hours: string[] | undefined};
+  Thursday: {active: boolean, hours: string[] | undefined};
+  Friday: {active: boolean, hours: string[] | undefined};
+  Saturday: {active: boolean, hours: string[] | undefined};
+  Sunday: {active: boolean, hours: string[] | undefined};
 }
 
 export interface UserForInvite extends Drivn.UserForCreate {
