@@ -64,6 +64,7 @@ import * as trip from "./tracking/trip.js";
 import * as report from "./tracking/report.js";
 
 import * as user from "./user/user.js";
+import * as filters from "./user/filters.js";
 import * as creds from "./user/user-with-creds.js";
 import * as token from "./user/user-with-token.js";
 
@@ -130,6 +131,7 @@ declare global {
     type User = user.User;
     type UserWithCreds = creds.UserWithCreds;
     type UserWithToken = token.UserWithToken;
+    type TripsFilter = filters.TripsFilter;
 
     // Vehicle Types
     /**
