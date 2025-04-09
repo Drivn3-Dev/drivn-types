@@ -129,6 +129,7 @@ declare global {
 
     // User Types
     type User = user.User;
+    type UserWorkDays = user.UserWorkDays;
     type UserWithCreds = creds.UserWithCreds;
     type UserWithToken = token.UserWithToken;
     type TripsFilters = filters.TripsFilters;
