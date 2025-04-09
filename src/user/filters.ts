@@ -1,5 +1,5 @@
 // The selected filter for the trips
-export interface TripsFilter {
+export interface TripsFilters {
     timerange: string,
 
     hourInterval: string,
