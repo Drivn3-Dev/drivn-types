@@ -131,7 +131,7 @@ declare global {
     type User = user.User;
     type UserWithCreds = creds.UserWithCreds;
     type UserWithToken = token.UserWithToken;
-    type TripsFilter = filters.TripsFilters;
+    type TripsFilters = filters.TripsFilters;
 
     // Vehicle Types
     /**
