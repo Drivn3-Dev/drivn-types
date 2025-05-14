@@ -16,4 +16,7 @@ export interface Address extends Location {
 
   // The State / Province For The Address
   state?: string;
+
+  // If the Location has a Name
+  name?: string;
 }
