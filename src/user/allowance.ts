@@ -18,23 +18,23 @@ export interface AllowanceOverview {
   tripIds: string[];
 
   // The Distance Driven in Business Context in km
-  businessMilage: number;
+  businessMilage?: number;
 
   // The Distance Driven in Private Context in km
-  privateMilage: number;
+  privateMilage?: number;
 
   // The Commute Distance in km
-  commuteMilage: number;
+  commuteMilage?: number;
 
   // The Emissions in Business Context in kg CO2
-  businessEmissions: number;
+  businessEmissions?: number;
 
   // The Emissions in Private Context in kg CO2
-  privateEmissions: number;
+  privateEmissions?: number;
 
   // The Commute Emissions in kg CO2
-  commuteEmissions: number;
+  commuteEmissions?: number;
 
   // The amount of reimbursement the user is entitled to
-  reimbursement: number;
+  reimbursement?: number;
 }
