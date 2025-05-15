@@ -165,6 +165,10 @@ export interface TripInfo {
 
   note?: string;
 
+  startAddr: Drivn.Address;
+  
+  endAddr: Drivn.Address;
+
   firstTimestamp?: any;
   lastTimestamp?: any;
 }
