@@ -1,3 +1,5 @@
+import { TripInfoShort } from "../tracking/trip-times.js";
+
 export interface AllowanceOverview {
   // The Overview Unique Id
   id: string;
@@ -37,4 +39,8 @@ export interface AllowanceOverview {
 
   // The amount of reimbursement the user is entitled to
   reimbursement?: number;
+}
+
+export interface AllowanceOverviewWithTripInfos extends AllowanceOverview {
+  tripInfos: TripInfoShort[];
 }

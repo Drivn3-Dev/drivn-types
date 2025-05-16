@@ -107,6 +107,7 @@ declare global {
     type LocationTimestamp = location.LocationTimestamp;
     type Report = report.Report;
     type AllowanceOverview = allowance.AllowanceOverview;
+    type AllowanceOverviewWithTripInfos = allowance.AllowanceOverviewWithTripInfos;
     type TripCreate = location.LogRequestBody;
     // The new trip types
     type ActivityIndex = new_trip.ActivityIndex;
@@ -206,7 +207,7 @@ declare global {
     type ResidenceCreate = Omit<Residence, "id" | "uid">;
     type ResidenceUpdate = Omit<Residence, "uid">;
     type ReportCreate = Omit<Report, "tripId" | "userId" | "id" | "date">;
-    type AllowanceOverviewCreate = Omit<AllowanceOverview, "id" | "userId">;
+    type AllowanceOverviewCreate = Omit<AllowanceOverviewWithTripInfos, "id" | "userId">;
     type UserCreate = Omit<UserWithCreds, "timeAdded" | "uid">;
     type UserUpdate = Partial<Omit<User, "uid" | "timeAdded">>;
     type ToggleAnonymous = {
