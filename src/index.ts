@@ -206,6 +206,7 @@ declare global {
     type ResidenceCreate = Omit<Residence, "id" | "uid">;
     type ResidenceUpdate = Omit<Residence, "uid">;
     type ReportCreate = Omit<Report, "tripId" | "userId" | "id" | "date">;
+    type AllowanceOverviewCreate = Omit<AllowanceOverview, "id" | "userId">;
     type UserCreate = Omit<UserWithCreds, "timeAdded" | "uid">;
     type UserUpdate = Partial<Omit<User, "uid" | "timeAdded">>;
     type ToggleAnonymous = {
