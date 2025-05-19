@@ -41,7 +41,7 @@ export interface AllowanceOverview {
   reimbursement?: number;
 
   // The current status of the overview (whether it is pending, approved, or rejected by the admin)
-  status: string;
+  status: "pending" | "approved" | "rejected" | undefined;
 }
 
 export interface AllowanceOverviewWithTripInfos extends AllowanceOverview {
