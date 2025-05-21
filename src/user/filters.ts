@@ -4,6 +4,8 @@ export interface TripsFilters {
 
     hourInterval: string,
 
+    minimumTripDistance: number,
+
     confirmed: boolean,
 
     commuter: boolean,
