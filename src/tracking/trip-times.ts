@@ -27,5 +27,6 @@ export interface TripInfoShort {
   emissions: number;
 
   startAddr?: Drivn.Address;
+  
   endAddr?: Drivn.Address;
 }
