@@ -25,4 +25,7 @@ export interface TripInfoShort {
 
   /** The total emissions of the trip */
   emissions: number;
+
+  startAddr?: Drivn.Address;
+  endAddr?: Drivn.Address;
 }
