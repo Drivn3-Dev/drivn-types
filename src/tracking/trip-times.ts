@@ -14,6 +14,9 @@ export interface TripInfoShort {
   /** Unique identifier for the office (or special trip type) */
   officeId?: string;
 
+  /** Unique identifier for the vehicle used in the trip */
+  vehicleId?: string;
+
   /** Array of distinct activity types involved in the trip */
   activityTypes?: Record<Drivn.ActivityType, Record<string, number>>;
 
