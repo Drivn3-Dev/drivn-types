@@ -67,11 +67,14 @@ export interface User {
   // The App Version
   version?: string;
 
-  // The user's commute days
+  // The user's commute days (Should be called 'active tracking periods')
   workDays?: UserWorkDays;
 
   // The user's residence id
   residenceId?: string;
+
+  // The user's clock-in and clock-out times
+  clockInOut?: UserWorkDays;
 }
 
 export interface UserWorkDays {
