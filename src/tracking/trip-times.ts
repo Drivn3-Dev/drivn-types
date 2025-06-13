@@ -11,6 +11,9 @@ export interface TripInfoShort {
   /** Boolean stating if the trip has been confirmed */
   correct?: boolean;
 
+  /** Unique identifier for the user who made the trip */
+  userId?: string;
+
   /** Unique identifier for the office (or special trip type) */
   officeId?: string;
 
