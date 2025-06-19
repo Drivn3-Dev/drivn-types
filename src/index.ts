@@ -66,6 +66,7 @@ import * as report from "./tracking/report.js";
 import * as user from "./user/user.js";
 import * as filters from "./user/filters.js";
 import * as allowance from "./user/allowance.js";
+import * as attendance from "./user/attendance.js";
 import * as creds from "./user/user-with-creds.js";
 import * as token from "./user/user-with-token.js";
 
@@ -106,8 +107,6 @@ declare global {
     type CurrentDrive = location.CurrentDrive;
     type LocationTimestamp = location.LocationTimestamp;
     type Report = report.Report;
-    type AllowanceOverview = allowance.AllowanceOverview;
-    type AllowanceOverviewWithTripInfos = allowance.AllowanceOverviewWithTripInfos;
     type TripCreate = location.LogRequestBody;
     // The new trip types
     type ActivityIndex = new_trip.ActivityIndex;
@@ -136,6 +135,9 @@ declare global {
     type UserWithCreds = creds.UserWithCreds;
     type UserWithToken = token.UserWithToken;
     type TripsFilters = filters.TripsFilters;
+    type AllowanceOverview = allowance.AllowanceOverview;
+    type AllowanceOverviewWithTripInfos = allowance.AllowanceOverviewWithTripInfos;
+    type Attendance = attendance.Attendance;
 
     // Vehicle Types
     /**
