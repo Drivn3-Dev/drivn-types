@@ -36,7 +36,7 @@ export const EMISSIONS_FACTORS = {
   [ActivityType.EV]: 0.054796,
 };
 
-export * from "./constants.js"
+export * as Constants from "./constants.js"
 export * from "./helpers/date.js";
 export * from "./errors/drivn-error.js";
 export * from "./tracking/activity-types.js";
