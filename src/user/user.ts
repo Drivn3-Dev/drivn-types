@@ -85,6 +85,7 @@ export interface UserWorkDays {
   Friday: {active: boolean, hours?: string[]};
   Saturday: {active: boolean, hours?: string[]};
   Sunday: {active: boolean, hours?: string[]};
+  Break: {minutes: number};
 }
 
 export interface UserForInvite extends Drivn.UserForCreate {
